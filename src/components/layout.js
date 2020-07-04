@@ -8,15 +8,27 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Scrollbars from 'react-custom-scrollbars'
+import { useMediaQuery } from 'react-responsive'
 
 import Header2 from "./header2"
 import Header from "./Header"
 import ProfileCard from "./ProfileCard"
-import Content from "./Content"
+// import Content from "./Content"
 
 
 import "./layout.css"
 import "../scss/index.scss"
+
+const Desktop = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 768 })
+  return isDesktop ? children : null
+}
+
+const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({ maxWidth: 767 })
+  return isMobile ? children : null
+}
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -35,7 +47,26 @@ const Layout = ({ children }) => {
       <div className="App__layout">
         <Header />
         <ProfileCard />
-        <Content />
+        <Desktop>
+          <div className="Content">
+            <div className="Content__wrapper">
+              <Scrollbars>
+              <div style={{ paddingRight: "20px" }}>
+                <main>{children}</main>
+              </div>
+              </Scrollbars>
+            </div>
+          </div>
+        </Desktop>
+        <Mobile>
+          <div className="Content">
+            <div className="Content__wrapper">
+              <div style={{ paddingRight: "20px" }}>
+                <main>{children}</main>
+              </div>
+            </div>
+          </div>
+        </Mobile>
       </div>
       {/*<Header2 siteTitle={data.site.siteMetadata.title} />*/}
       {/*<div*/}
