@@ -3,7 +3,10 @@ import MyFoto from "./myFoto"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faDownload, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { library, config } from '@fortawesome/fontawesome-svg-core'
 import pdf from '../utils/krzysztofgryc.pdf';
+
+config.autoAddCss = false
 
 function ProfileCard() {
     return (
