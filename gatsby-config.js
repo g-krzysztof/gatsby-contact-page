@@ -28,6 +28,24 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        excludedRoutes: [
+          '/wp/v2/users/**',
+          '/wp/v2/settings*',
+          '/wp/v2/themes*',
+        ],
+        baseUrl: 'rubinow3.pro-linuxpl.com/_gatsby_krzysztofg',
+        protocol: 'http',
+        hostingWPCOM: false,
+        useACF: false,
+        searchAndReplaceContentUrls: {
+          sourceUrl: 'http://rubinow3.pro-linuxpl.com/_gatsby_krzysztofg',
+          replacementUrl: '',
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

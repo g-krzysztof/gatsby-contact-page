@@ -1,13 +1,25 @@
 import React from "react"
 import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import parse from 'html-react-parser'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+
+export const query = graphql`
+query MyQuery {
+  wordpressPost(categories: {elemMatch: {name: {eq: "about-me"}}}) {
+    content
+    title
+  }
+}
+`
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <div className="Content__about">
+      {parse(data.wordpressPost.content)}
       <h2>Front-end Developer</h2>
       <p>
         Moim celem zawodowym jest praca <br /> na stanowisku Front-end Developera.
