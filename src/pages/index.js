@@ -6,7 +6,6 @@ import parse from 'html-react-parser'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-
 export const query = graphql`
 query MyQuery {
   wordpressPost(categories: {elemMatch: {name: {eq: "about-me"}}}) {
