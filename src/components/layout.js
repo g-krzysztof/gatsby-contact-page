@@ -30,28 +30,43 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+
+    <div className="App">
       <div className="App__layout">
         <Header />
         <ProfileCard />
         <Content />
       </div>
-      <Header2 siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
+      {/*<Header2 siteTitle={data.site.siteMetadata.title} />*/}
+      {/*<div*/}
+      {/*  style={{*/}
+      {/*    margin: `0 auto`,*/}
+      {/*    maxWidth: 960,*/}
+      {/*    padding: `0 1.0875rem 1.45rem`,*/}
+      {/*  }}*/}
+      {/*>*/}
+      {/*  <main>{children}</main>*/}
+      {/*  <footer>*/}
+      {/*    © {new Date().getFullYear()}, Built with*/}
+      {/*    {` `}*/}
+      {/*    <a href="https://www.gatsbyjs.org">Gatsby</a>*/}
+      {/*  </footer>*/}
+      {/*</div>*/}
+      <ul className="App__squares">
+        <li className="fa fa-stop" aria-hidden="true"></li>
+        <li className="fa fa-stop" aria-hidden="true"></li>
+        <li className="fa fa-stop" aria-hidden="true"></li>
+        <li className="fa fa-stop" aria-hidden="true"></li>
+        <li className="fa fa-stop" aria-hidden="true"></li>
+        <li className="fa fa-stop" aria-hidden="true"></li>
+        <li className="fa fa-stop" aria-hidden="true"></li>
+        <li className="fa fa-stop" aria-hidden="true"></li>
+        <li className="fa fa-stop" aria-hidden="true"></li>
+        <li className="fa fa-stop" aria-hidden="true"></li>
+        <li className="fa fa-stop" aria-hidden="true"></li>
+        <li className="fa fa-stop" aria-hidden="true"></li>
+      </ul>
+    </div>
   )
 }
 

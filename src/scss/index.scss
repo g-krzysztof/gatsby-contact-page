@@ -5,6 +5,9 @@
 @import "Header";
 @import "ProfileCard";
 
+$fa-font-path: "~font-awesome/fonts/";
+@import "~font-awesome/scss/font-awesome";
+
 .css-yrspe {
   z-index: 11 !important;
 }
