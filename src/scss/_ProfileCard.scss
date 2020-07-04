@@ -96,6 +96,8 @@
     &__self-wrapper {
         position: relative;
         margin-top: -25%;
+        width: 140px;
+        height: 140px;
     }
     &__self-wrapper::before {
         background: linear-gradient(135deg,rgba(120,204,109,.4) 0%,rgba(120,204,109,.01) 100%);

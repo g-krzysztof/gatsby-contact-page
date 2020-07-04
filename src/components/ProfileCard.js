@@ -1,4 +1,5 @@
 import React from 'react';
+import MyFoto from "./myFoto"
 // import '../css/ProfileCard.css';
 // import selffoto from '../utils/my-photo-kadr.jpg';
 // import pdf from '../utils/krzysztofgryc.pdf';
@@ -11,6 +12,7 @@ function ProfileCard() {
                 <div className="ProfileCard__self-wrapper">
                     <a href="https://krzysztofg.pl">
                         {/*<img className="ProfileCard__self-image" src={selffoto} alt="Krzysztof Gryc" />*/}
+                        <MyFoto />
                     </a>
                 </div>
                 <div className="ProfileCard__title">Krzysztof Gryc</div>
