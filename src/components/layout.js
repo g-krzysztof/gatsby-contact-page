@@ -11,11 +11,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Scrollbars from 'react-custom-scrollbars'
 import { useMediaQuery } from 'react-responsive'
 
-import Header2 from "./header2"
 import Header from "./Header"
 import ProfileCard from "./ProfileCard"
-// import Content from "./Content"
-
 
 import "./layout.css"
 import "../scss/index.scss"
@@ -68,21 +65,7 @@ const Layout = ({ children }) => {
           </div>
         </Mobile>
       </div>
-      {/*<Header2 siteTitle={data.site.siteMetadata.title} />*/}
-      {/*<div*/}
-      {/*  style={{*/}
-      {/*    margin: `0 auto`,*/}
-      {/*    maxWidth: 960,*/}
-      {/*    padding: `0 1.0875rem 1.45rem`,*/}
-      {/*  }}*/}
-      {/*>*/}
-      {/*  <main>{children}</main>*/}
-      {/*  <footer>*/}
-      {/*    © {new Date().getFullYear()}, Built with*/}
-      {/*    {` `}*/}
-      {/*    <a href="https://www.gatsbyjs.org">Gatsby</a>*/}
-      {/*  </footer>*/}
-      {/*</div>*/}
+
       <ul className="App__squares">
         <li className="fa fa-stop" aria-hidden="true"></li>
         <li className="fa fa-stop" aria-hidden="true"></li>
