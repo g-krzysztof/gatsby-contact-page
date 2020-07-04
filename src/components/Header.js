@@ -1,30 +1,32 @@
 import React from 'react';
-// import '../css/Header.css';
-// import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserCircle, faFileCode, faMailBulk } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "gatsby"
 
 function Header() {
     return (
         <div className="Header">
             <ul className="Header__nav">
                 <li className="Header__item" key="01">
-                    {/*<NavLink to="/" exact={true}>*/}
-                        <span className="Header__link"><i className="fa fa-user-circle-o Header__icon" aria-hidden="true"></i><br />o mnie</span>
-                    {/*</NavLink>*/}
+                  <Link to="/">
+                        <span className="Header__link">
+                          <FontAwesomeIcon icon={faUserCircle} size="2x"/>
+                          <br />o mnie</span>
+                  </Link>
                 </li>
                 <li className="Header__item" key="02">
-                    {/*<NavLink to="/resume">*/}
-                        <span className="Header__link"><i className="fa fa-file-text-o Header__icon" aria-hidden="true"></i><br />CV</span>
-                    {/*</NavLink>*/}
-                </li>
-                <li className="Header__item" key="03">
-                    {/*<NavLink to="/works">*/}
-                        <span className="Header__link"><i className="fa fa-desktop Header__icon" aria-hidden="true"></i><br />pro ...</span>
-                    {/*</NavLink>*/}
+                  <Link to="/resume">
+                        <span className="Header__link">
+                          <FontAwesomeIcon icon={faFileCode} size="2x"/>
+                          <br />CV</span>
+                  </Link>
                 </li>
                 <li className="Header__item" key="04">
-                    {/*<NavLink to="/contact">*/}
-                        <span className="Header__link"><i className="fa fa-paper-plane-o Header__icon" aria-hidden="true"></i><br />kontakt</span>
-                    {/*</NavLink>*/}
+                  <Link to="/contact">
+                        <span className="Header__link">
+                          <FontAwesomeIcon icon={faMailBulk} size="2x"/>
+                          <br />kontakt</span>
+                  </Link>
                 </li>
             </ul>
         </div>
