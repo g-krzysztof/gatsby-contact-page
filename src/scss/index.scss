@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,600,600i,900,900i&display=swap&subset=latin-ext');
+@import "variables";
+@import "App";
+@import "Content";
+@import "Header";
+@import "ProfileCard";
+
+.css-yrspe {
+  z-index: 11 !important;
+}
+
+.css-1rbq2qy {
+  z-index: 11 !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  // overflow: hidden;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

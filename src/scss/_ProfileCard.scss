@@ -1,0 +1,195 @@
+.ProfileCard {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    z-index: 5;
+    @media #{$mw7} {
+        margin: 0 15vw;
+    }
+    @media #{$mw4} {
+        margin: 0 0 0 0;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 480px;
+        height: 70vh;
+        background-color: white;    
+        border-radius: 5px;
+        transition: .5s;
+        @media #{$mh8} {
+			height: 90vh;
+		}
+        @media #{$mw14} {
+            width: 380px;
+        }
+        @media #{$mw7} {
+            width: 70vw;
+            border-radius: 0px;
+        }
+        @media #{$mw4} {
+            width: 100vw;
+        }
+    }
+    &__content::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        margin-left: -15px;
+        margin-top: -15px;
+        width: 480px;
+        height: 70vh;
+        background: linear-gradient(135deg,rgba(120,204,109,.4) 0%,rgba(120,204,109,.01) 100%);
+        border-radius: 5px;
+        transition: .5s;
+        @media #{$mh8} {
+			height: 90vh;
+		}
+        @media #{$mw14} {
+            width: 380px;
+        }
+        @media #{$mw7} {
+            background: none;
+        }
+    }
+    &__image{
+        background-image: url(../utils/profile-background.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 5px;
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+        @media #{$mw7} {
+            border-radius: 0px;
+        }
+        @media #{$mh5} {
+            height: 40%;
+        }
+    }
+    &__image::before {
+        content: '';
+        position: absolute;
+        left: -25%;
+        bottom: -63%;
+        width: 100%;
+        height: 70%;
+        background: #fff;
+        transform: rotate(12deg);
+    }
+    &__image::after {
+        content: '';
+        position: absolute;
+        left: auto;
+        right: -25%;
+        bottom: -63%;
+        width: 100%;
+        height: 70%;
+        background: #fff;
+        transform: rotate(-8deg);
+    }
+    &__self-wrapper {
+        position: relative;
+        margin-top: -25%;
+    }
+    &__self-wrapper::before {
+        background: linear-gradient(135deg,rgba(120,204,109,.4) 0%,rgba(120,204,109,.01) 100%);
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: -10px;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    &__self-image {
+        border: 3px solid #fff;
+        border-radius: 100%;
+        position: relative;
+        overflow: visible;
+        width: 140px;
+    }
+    &__title {
+        font-size: 32px;
+        font-weight: 600;
+        color: $gray;
+        margin: 20px 0 0 0;
+    }
+    &__subtitle {
+        color: $main-color;
+        font-weight: 600;
+        margin: 0px 0 20px 0;
+    }
+    &__social {
+        a {
+            color: $gray;
+            text-decoration: none;
+            font-size: 20px;
+            transition: .2s;
+        }
+        a:hover {
+            color: $main-color;
+        }
+    }
+    &__bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        z-index: 10;
+        border-radius: 0 0 5px 5px;
+    }
+    &__bottom::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        background: radial-gradient(ellipse at center,#ddd 0%,rgba(255,255,255,0) 70%);
+    }
+    &__bottom-btn {
+        width: 50%;
+        border: 0;
+        background-color: #fff;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        color: $gray;
+        cursor: pointer;
+        outline:none;
+        transition: .2s;
+        @media #{$mw7} {
+            border-radius: 0px;
+        }
+        a {
+            color: $gray;
+            text-decoration: none;
+            transition: .2s;
+        }
+        a:hover {
+            color: $main-color;
+        }
+    }
+    &__bottom-btn:hover {
+        color: $main-color;
+    }
+    &__bottom-btn:nth-child(1)::before {
+        content: '';
+        position: absolute;
+        right: 50%;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: radial-gradient(ellipse at top,#ddd 0%,rgba(255,255,255,0) 70%);
+    }
+}
