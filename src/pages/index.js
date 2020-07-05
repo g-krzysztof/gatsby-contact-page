@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export const query = graphql`
-query MyQuery {
+query IndexPageQuery {
   wordpressPost(categories: {elemMatch: {name: {eq: "about-me"}}}) {
     content
     title

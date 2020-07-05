@@ -1,13 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const ContactPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Contact" />
     <div className="Content__about">
       <h2>Kontakt</h2>
       <p>e-mail: <span className="Content__strong-span">hello@krzysztofg.pl</span></p>
