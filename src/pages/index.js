@@ -1,10 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import parse from 'html-react-parser'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import scoreSrc from '../images/score.jpg';
 
 export const query = graphql`
 query IndexPageQuery {
@@ -23,6 +24,9 @@ const IndexPage = ({ data }) => (
       <p>
         Ta strona została zbudowana przy pomocy: <br/>
         <strong>GatsbyJs</strong>, <strong>Wordpress</strong> (dane z headless CMS), Netlify & Git (deployment).
+      </p>
+      <p>
+        <img src={scoreSrc} />
       </p>
     </div>
   </Layout>
