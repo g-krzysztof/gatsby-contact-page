@@ -19,24 +19,11 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     <div className="Content__about">
       {parse(data.wordpressPost.content)}
-      <h2>Front-end Developer</h2>
-      <p>
-        Moim celem zawodowym jest praca <br /> na stanowisku Front-end Developera.
-      </p>
-      <p>
-        Na co dzień pracuję z HTML i CSS. <br />
-        Rozwijam umiejętności Java Script.<br />
-        W ostatnim czasie pracuję głównie z <span className="Content__strong-span">framework React JS.</span></p>
-      <div className="Content__spacer"></div>
-      <div className="Content__border-gradient"></div>
-      <div className="Content__spacer"></div>
-      <p>
-        Od ponad dziesięciu lat zajmuję się projektowaniem graficznym. <br />Tworzę prace na potrzeby poligrafii oraz projekty stron internetowych.
-      </p>
-      <p>
-        Pracuję także z CMS Joomla i Wordpress.
-      </p>
 
+      <p>
+        Ta strona została zbudowana przy pomocy: <br/>
+        <strong>GatsbyJs</strong>, <strong>Wordpress</strong> (dane z headless CMS), Netlify & Git (deployment).
+      </p>
     </div>
   </Layout>
 )
