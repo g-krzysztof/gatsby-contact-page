@@ -20,7 +20,6 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     <div className="Content__about">
       {parse(data.wordpressPost.content)}
-
       <p>
         Ta strona została zbudowana przy pomocy: <br/>
         <strong>GatsbyJs</strong>, <strong>Wordpress</strong> (dane z headless CMS), Netlify & Git (deployment).
