@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
         <strong>GatsbyJs</strong>, <strong>Wordpress</strong> (dane z headless CMS), Netlify & Git (deployment).
       </p>
       <p>
-        <img src={scoreSrc} />
+        <img src={scoreSrc} alt="wynik testu Lighthouse" />
       </p>
     </div>
   </Layout>
