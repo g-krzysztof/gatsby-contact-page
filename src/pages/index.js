@@ -22,10 +22,10 @@ const IndexPage = ({ data }) => (
       {parse(data.wordpressPost.content)}
       <p>
         Ta strona została zbudowana przy pomocy: <br/>
-        <strong>GatsbyJs</strong>, <strong>Wordpress</strong> (dane z headless CMS), Netlify & Git (deployment).
+        <strong>GatsbyJs</strong>, <strong>headless CMS (Wordpress)</strong>, Netlify & Github (deployment).
       </p>
       <p>
-        <img src={scoreSrc} alt="wynik testu Lighthouse" />
+        <img width="242px" src={scoreSrc} alt="wynik testu Lighthouse" />
       </p>
     </div>
   </Layout>
