@@ -5,6 +5,18 @@ module.exports = {
     author: `hello@krzysztofg.pl`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `KrzysztofG`,
+        short_name: `KrzysztofG`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#78CC6D`,
+        display: `standalone`,
+      },
+    },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
